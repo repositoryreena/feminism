@@ -1,0 +1,298 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fff9f8;
+  color: #333;
+  padding: 0 1rem;
+}
+
+h1, h2 {
+  color: #7b2cbf;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+header.hero {
+  text-align: center;
+  background: linear-gradient(to right, #f3c4fb, #fce5ec);
+  padding: 4rem 1rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Quotes Section */
+.quotes {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+blockquote {
+  background-color: #ffe0f0;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #ff69b4;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+/* Timeline Section */
+.timeline ul {
+  list-style-type: none;
+  max-width: 700px;
+  margin: auto;
+}
+
+.timeline li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '●';
+  color: #9d4edd;
+  position: absolute;
+  left: 0;
+}
+
+/* Myths Section (FAQ) */
+.faq {
+  max-width: 700px;
+  margin: auto;
+}
+
+.question {
+  display: block;
+  width: 100%;
+  background-color: #f3f0ff;
+  color: #5a189a;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.question:hover {
+  background-color: #e0cffc;
+}
+
+.answer {
+  display: none;
+  padding: 1rem;
+  background-color: #fff;
+  border-left: 4px solid #9d4edd;
+  border-radius: 0 6px 6px 6px;
+  margin-bottom: 1rem;
+}
+
+/* Stories & Quiz Sections */
+.stories, .quiz {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f3f0ff;
+  margin-top: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  color: #5a189a;
+  font-weight: bold;
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+  .quote-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .quote-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.story {
+  background-color: #fff0f6;
+  padding: 1.5rem;
+  border-left: 5px solid #d63384;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.7;
+  color: #444;
+  font-size: 1rem;
+}
+
+.story em {
+  font-style: italic;
+  color: #a61e4d;
+}
+
+.quiz {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+#quiz-container {
+  background: #fdf0ff;
+  border: 2px solid #c77dff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+#question {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 2px solid #9d4edd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background: #e5dbff;
+}
+
+#options button.selected {
+  background-color: #d0bfff;
+  border-color: #7b2cbf;
+}
+
+#next-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #7b2cbf;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#result {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #6a0572;
+}
+
+.icons {
+  padding: 3rem 1rem;
+  background-color: #fff0f6;
+  text-align: center;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.icon-card {
+  background: white;
+  border-left: 5px solid #d63384;
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.icon-card h3 {
+  margin-bottom: 0.5rem;
+  color: #7b2cbf;
+}
+
+.icon-card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.songs {
+  padding: 2.5rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.songs ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.songs li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.songs a {
+  text-decoration: none;
+  color: #9d4edd;
+  font-weight: bold;
+}
+
+.songs a:hover {
+  color: #7b2cbf;
+  text-decoration: underline;
+}
